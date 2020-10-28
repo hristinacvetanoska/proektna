@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Food</title>
+        <style>
+            body{
+                background-color:lavender;
+                background-size: cover;
+            }
+            ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: purple;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: palevioletred;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(183, 81, 223, 0.144);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 280px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}  
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Favorite</a>
+              <div class="dropdown-content">
+                <a href="music.html">Music</a>
+                <a href="food.html">Food</a>
+                <a href="film.html">Film</a>
+              </div>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="visitor.html">Visitor survey</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </li>
+          </ul>
+          <div class="dropdown" style="float:right;">
+            <button class="dropbtn" style="background: purple;font-weight: bold"><em>Types of food</em></button>
+            <div class="dropdown-content" style="right:0;">
+            <a href="healtyeating.html">Healthy eating</a>
+            <a href="fastfood.html">Fast Food</a>
+            </div>
+          </div>
+          <h1 style="text-align: center;color: palevioletred; font-style: italic;">Cake & Oatmeal Recipes</h1>
+          <marquee scrollamount="7" direction="right" behavior="scroll"><img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/202685_0-803-5447-5447.jpg" style="width: 400px;height: 400px;">
+            <img src="https://www.handletheheat.com/wp-content/uploads/2013/07/Oatmeal-Chocolate-Chip-Cookies-SQUARE.jpg" style="width: 300px; height: 400px;">
+            <img src="https://diethood.com/wp-content/uploads/2019/12/How-To-Make-Oatmeal-4.jpg" style="width: 300px;height: 400px;">
+            <img src="https://asimplepalate.com/wp-content/uploads/2019/02/banana-oatmeal-2.jpg" style="width: 300px;height: 400px;">
+          </marquee>
+          <h2 style="text-align: left;font-style: italic;color: palevioletred;">Cake</h2>
+
+          <div class="gallery">
+            <a target="_blank" href="https://www.latimes.com/recipe/proofs-chocolate-espresso-layer-cake">
+              <img src="https://ca-times.brightspotcdn.com/dims4/default/485b204/2147483647/strip/true/crop/2048x1379+0+0/resize/1486x1001!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F16%2F84%2F6d475eceb85c0e39c93c1aa01ce0%2Fla-fo-proof-chocolate-cake-photos-012" alt="Cake" width="600";height="400">
+            </a>
+            <div class="desc">Chocolate Cake</div>
+        </div>
+          
+        <div class="gallery">
+            <a target="_blank" href="https://www.bettycrocker.com/recipes/chocolate-glazed-fudge-cake/dc5bc279-0d8f-4621-8255-f1ae6d15ef6f">
+              <img src="https://images-gmi-pmc.edge-generalmills.com/313fcae4-c766-4e20-9513-4d7bea381f9d.jpg" alt="Cake" width="600" height="400">
+            </a>
+            <div class="desc">Chocolate-Glazed Fudge Cake</div>
+        </div>
+          
+        <div class="gallery">
+            <a target="_blank" href="https://www.countryliving.com/food-drinks/recipes/a871/basic-vanilla-cake-69/">
+              <img src="https://hips.hearstapps.com/clv.h-cdn.co/assets/cm/15/10/54f4a5df2e61b_-_gettyimages_182875449.jpg" alt="Cake" width="600" height="400">
+            </a>
+            <div class="desc">Basic Vanilla Cake</div>
+        </div>
+        
+        <div class="gallery">
+            <a target="_blank" href="https://bromabakery.com/chocolate-brownie-birthdya-cupcakes-recipe/">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQibUN3iruTjRvGVaNjWkmO-dhz5vI8VgLwPw&usqp=CAU" alt="Mistletoe" width="600" height="400">
+            </a>
+            <div class="desc">Birthday Chocolate Brownie Cupcakes</div>
+        </div>
+        <br clear="all"/>
+
+        <h2 style="text-align: left;font-style: italic;color: purple;">Oatmeal Bowl and Cookies</h2>
+
+        <div class="gallery">
+          <a target="_blank" href="https://asimplepalate.com/blog/nourishing-oatmeal-breakfast-bowl/">
+            <img src="https://asimplepalate.com/wp-content/uploads/2018/04/Nourishing-Oatmeal-Breakfast-Bowl-5.jpg" alt="Oatmeal" width="600";height="400">
+          </a>
+          <div class="desc">Healthy Peanut Butter Oatmeal Bowl</div>
+      </div>
+        
+      <div class="gallery">
+          <a target="_blank" href="https://asimplepalate.com/blog/oatmeal-blueberry-crumb-cake/">
+            <img src="https://asimplepalate.com/wp-content/uploads/2020/09/blueberry-crumb-cake-1-1365x2048.jpg" alt="Oatmeal Blueberry Crumb Cake" width="600" height="400">
+          </a>
+          <div class="desc">Oatmeal Blueberry Crumb Cake</div>
+      </div>
+        
+      <div class="gallery">
+          <a target="_blank" href="https://asimplepalate.com/blog/chewy-gluten-free-peanut-butter-cookies/">
+            <img src="https://asimplepalate.com/wp-content/uploads/2019/11/gluten-free-peanut-butter-cookies-2.jpg" alt="Cake" width="600" height="400">
+          </a>
+          <div class="desc">Chewy Gluten Free Peanut Butter Cookies</div>
+      </div>      
+      <div class="gallery">
+          <a target="_blank" href="https://asimplepalate.com/blog/chewy-gingerbread-molasses-cookies-with-dark-chocolate/">
+            <img src="https://asimplepalate.com/wp-content/uploads/2019/12/gingerbread-molasses-cookies-final3.jpg" alt="Mistletoe" width="600" height="400">
+          </a>
+          <div class="desc">Cookies with Dark Chocolate</div>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://lovelylittlekitchen.com/triple-berry-oatmeal-breakfast-bowl/">
+          <img src="https://d2t88cihvgacbj.cloudfront.net/manage/wp-content/uploads/2016/02/Triple-Berry-Oatmeal-Breakfast-Bowl-3.jpg?x11740" alt="Mistletoe" width="600" height="400">
+        </a>
+        <div class="desc">Triple Berry Oatmeal Breakfast Bowl</div>
+    </div>
+      <br clear="all"/>
+    </body>

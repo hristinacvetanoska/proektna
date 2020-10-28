@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Film</title>
+        <style>
+            body{
+                background-color:lavender;
+                background-size: cover;
+            }
+            ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: purple;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: palevioletred;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(183, 81, 223, 0.144);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}  
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Favorite</a>
+              <div class="dropdown-content">
+                <a href="music.html">Music</a>
+                <a href="food.html">Food</a>
+                <a href="film.html">Film</a>
+              </div>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="visitor.html">Visitor survey</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </li>
+          </ul>
+        <br>
+        <h2 style="text-align: center;font-style: italic;"><strong>List of favorite movies</strong></h2>
+        <h3 style="text-align: left;font-style: italic;"><strong>Action</strong></h3>
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt0848228/plotsummary?ref_=tt_stry_pl#synopsis">
+              <img src="https://i.pinimg.com/originals/0f/03/e6/0f03e6733b0cf567cc92e8e20290462f.jpg" alt="The Avengers" width="600" height="400">
+            </a>
+            <div class="desc">The Avengers</div>
+        </div>
+          
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt4154756/plotsummary?ref_=tt_stry_pl#synopsis">
+              <img src="https://i.pinimg.com/564x/c8/80/9c/c8809ca23deac0b009bba7208bcd7f87.jpg" alt="Avengers: Infinity War" width="600" height="400">
+            </a>
+            <div class="desc">Avengers: Infinity War</div>
+        </div>
+          
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt4154796/plotsummary?ref_=tt_stry_pl#synopsis">
+              <img src="https://images8.alphacoders.com/100/thumb-1920-1003220.png" alt="Avengers: End Game" width="600" height="400">
+            </a>
+            <div class="desc">Avengers: End Game</div>
+        </div>
+          
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1206885/?ref_=fn_al_tt_1">
+              <img src="https://pics.filmaffinity.com/Rambo_Last_Blood-420325748-large.jpg" alt="Rambo: Last Blood " width="600" height="400">
+            </a>
+            <div class="desc">Rambo: Last Blood </div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1243957/?ref_=nv_sr_srsg_0">
+              <img src="https://resizing.flixster.com/zK2MJMHWSMRWVZPg_HqJ6PZjQ7Y=/206x305/v2/https://flxt.tmsimg.com/assets/p8269420_p_v8_ad.jpg" alt="The Tourist" width="600" height="400">
+            </a>
+            <div class="desc">The Tourist</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1587310/?ref_=nv_sr_srsg_0">
+              <img src="https://images.squarespace-cdn.com/content/511eea22e4b06642027a9a99/1413267280376-WSX7K9I7RN2BYP9I1M89/Maleficent.jpg?content-type=image%2Fjpeg" alt="Maleficent 2014" width="600" height="400">
+            </a>
+            <div class="desc">Maleficent 2014</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1025100/?ref_=fn_al_tt_1">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQmP0mgyufhpGQ733ut6mzFWCR1ODGeebv5Sw&usqp=CAU" alt="Gemini Man" width="600" height="400">
+            </a>
+            <div class="desc">Gemini Man</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1013752/?ref_=fn_al_tt_1">
+              <img src="https://alchetron.com/cdn/fast-and-furious-2009-film-d8e53ec3-953e-4b26-b804-72d66caf0ae-resize-750.jpg" alt="Fast & Furious" width="600" height="400">
+            </a>
+            <div class="desc">Fast & Furious</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1300854/?ref_=nv_sr_srsg_0">
+              <img src="https://www.denofgeek.com/wp-content/uploads/2019/03/iron-man-3-poster_0.jpg?fit=1200%2C675" alt="Iron Man 3" width="600" height="400">
+            </a>
+            <div class="desc">Iron Man 3</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt1228705/?ref_=fn_al_tt_2">
+              <img src="https://i.pinimg.com/originals/e6/57/e6/e657e6bc4a6a58e1397863850b876c9f.jpg" alt="Iron Man 2" width="600" height="400">
+            </a>
+            <div class="desc">Iron Man 2</div>
+        </div>
+        <br clear="all"/>
+        <h3 style="text-align: left;font-style: italic;"><strong>Adventure</strong></h3>
+
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt4777008/?ref_=nv_sr_srsg_0">
+              <img src="https://cdn.geeksandgamers.com/wp-content/uploads/2019/10/maleficent-2-poster-angelina-jolie-1181791-1280x0.jpeg" alt="Maleficent: Mistress of Evil 2019" width="600" height="400">
+            </a>
+            <div class="desc">Maleficent: Mistress of Evil 2019</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="https://www.imdb.com/title/tt6565702/?ref_=nv_sr_srsg_0">
+              <img src="https://lumiere-a.akamaihd.net/v1/images/20cs_xmen_dark_phoenix_poster-keyart_2de4ace2.jpeg?region=0,0,1400,2100" alt="X-Men: Dark Phoenix" width="600" height="400">
+            </a>
+            <div class="desc">X-Men: Dark Phoenix</div>
+        </div>
+    </body>
+</html>

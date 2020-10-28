@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Visitor</title>
+        <style>
+            body{
+                background-color: lavender;
+                background-size: cover;
+            }
+            ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: purple;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: palevioletred;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(183, 81, 223, 0.144);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+    </style>
+</head>
+    <body>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)" class="dropbtn">Favorite</a>
+              <div class="dropdown-content">
+                <a href="music.html">Music</a>
+                <a href="food.html">Food</a>
+                <a href="film.html">Film</a>
+              </div>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="visitor.html">Visitor survey</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </li>
+          </ul>
+          <h3>I would like to know your opinions about my website</h3>
+          <p>Is this the first time you have visited our site?</p>
+          <form>
+            <input type="radio" id="yes" name="opinion1" value="yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="not bad" name="opinion1" value="no">
+            <label for="no">No</label><br>
+            <input type="radio" id="not sure" name="opinion1" value="not sure">
+            <label for="not sure">Note sure</label>
+          </form> 
+          <form action="/action_page.php">
+            <input type="submit" value="submit">
+          </form>
+          <br>
+          <p>Are you</p>
+          <form>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </form><br>
+          <form action="/action_page.php">
+            <input type="submit" value="submit">
+          </form><br>
+          <form>
+            <label for="age">What is your age?</label><br>
+            <input type="text" id="age" name="age"><br>
+          </form>
+          <form action="/action_page.php">
+            <input type="submit" value="submit">
+          </form><br>
+          <p>Please tell us about yourself</p>
+          <textarea id="review" name="review" rows="7" cols="50">
+            Write your text here...
+          </textarea>
+          <form action="/action_page.php">
+            <input type="submit" value="submit">
+          </form><br>
+          <p>How often do you vist my site?</p>
+          <form>
+            <input type="radio" id="daily" name="visit" value="daily">
+            <label for="daily">Daily</label><br>
+            <input type="radio" id="times" name="visit" value="times">
+            <label for="times">2 or 3 times a week</label><br>
+            <input type="radio" id="month" name="visit" value="month">
+            <label for="month">1-2 times a month</label><br>
+            <input type="radio" id="monthly" name="visit" value="monthly">
+            <label for="monthly">Monthly</label><br>
+            <input type="radio" id="less_month" name="visit" value="less_month">
+            <label for="less_month">Less than monthly</label><br>
+            <input type="radio" id="notsure" name="visit" value="notsure">
+            <label for="notsure">Not sure</label><br>
+            <input type="radio" id="other" name="visit" value="other">
+            <label for="other">Other</label><br>
+          </form><br> 
+          <form action="/action_page.php">
+            <input type="submit" value="submit">
+          </form>
+          <h3>Thank you for your feedback.</h3>
+    </body>
+</html>
