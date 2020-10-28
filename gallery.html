@@ -56,8 +56,43 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}   
-        </style>
+} 
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 280px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.btn {
+  box-shadow: 1px 1px 0 rgba(255,255,255,0.5) inset;
+  border-radius: 3px;
+  border: 1px solid;
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  position: relative;
+
+  font-size: 12px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+</style>
     </head>
     <body>
         <ul>
@@ -75,10 +110,94 @@ li.dropdown {
               <li><a href="contact.html">Contact</a></li>
             </li>
           </ul>
-
-          <form action="gallery.html">
-            <label for="img">Select image:</label>
-            <input type="file" id="img" name="img" accept="image/*">
-            <input type="submit">
+         <marquee direction="right" scrollamount="3"> <h1 style="text-align: center;font-style: oblique;color: orchid;">Welcome to my gallery!</h1></marquee>
+          <!--Slikite za vo galerijata: -->
+          <div class="gallery">
+            <a target="_blank">
+              <img src="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Ohrid<br>Comments:</div>
+            <form action="/action_page.php" method="POST">
+            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
+            </textarea>
+            <input type="submit" value="submit">
           </form>
+          <p>
+            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+          </p>
+        </div>
+
+
+          <div class="gallery">
+            <a target="_blank">
+              <img src="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Skopje<br>Comments:</div>
+            <form action="/action_page.php" method="POST">
+            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
+            </textarea>
+            <input type="submit" value="submit">
+          </form>
+          <p>
+            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+          </p>
+        </div>
+
+          <div class="gallery">
+            <a target="_blank">
+              <img src="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Venice<br>Comments:</div>
+            <form action="/action_page.php" method="POST">
+            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
+            </textarea>
+            <input type="submit" value="submit">
+          </form>
+          <p>
+            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+          </p>
+        </div>
+
+          <div class="gallery">
+            <a target="_blank">
+              <img src="https://www.cia-france.com/media/1558/parcarou1_720x500.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Paris<br>Comments:</div>
+            <form action="/action_page.php" method="POST">
+            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
+            </textarea>
+            <input type="submit" value="submit">
+          </form>
+          <p>
+            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+          </p>
+        </div>
+
+          <div class="gallery">
+            <a target="_blank">
+              <img src="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Paris<br>Comments:</div>
+            <form action="/action_page.php" method="POST">
+            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
+            </textarea>
+            <input type="submit" value="submit">
+          </form>
+          <p>
+            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
+          </p>
+        </div>
+          <br clear="all">
+          <!--stavanje na nova slika: -->
+          <h3>Here you can upload an image:</h3>
+          <form action="gallery.html" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+          </form>
+
+          <br clear="all"/>
+          
+
     </body>
+</html>
