@@ -117,14 +117,13 @@ div.desc {
               <img src="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">Ohrid<br>Comments:</div>
-            <form action="#" method="POST">
-            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
-            </textarea>
-            <input type="submit" value="submit">
+            <div id="text"></div>
+            <form>
+            <textarea id="blogtext" name="review" rows="5" cols="15" placeholder="Write your comment here..."></textarea>
           </form>
-          <p>
-            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-          </p>
+            <button onclick="funkcija1()">Send</button>
+            <button id="button" title="Love it" onclick="Like()"><span>&#x2764;</span></button>
+          
         </div>
 
 
@@ -133,14 +132,12 @@ div.desc {
               <img src="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">Skopje<br>Comments:</div>
-            <form action="#" method="POST">
-            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
-            </textarea>
-            <input type="submit" value="submit">
-          </form>
-          <p>
-            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-          </p>
+            <div id="text2"></div>
+            <form>
+            <textarea id="blogtext2" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+            </form>
+            <button onclick="funkcija2()">Send</button>
+            <button id="button2" title="Love it"  onclick="Like2()"><span>&#x2764;</span></button>
         </div>
 
           <div class="gallery">
@@ -148,14 +145,12 @@ div.desc {
               <img src="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">Venice<br>Comments:</div>
-            <form action="#" method="POST">
-            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
-            </textarea>
-            <input type="submit" value="submit">
-          </form>
-          <p>
-            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-          </p>
+            <div id="text3"></div>
+            <form>
+              <textarea id="blogtext3" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+            </form>
+          <button onclick="funkcija3()">Send</button>
+          <button id="button3" title="Love it"  onclick="Like3()"><span>&#x2764;</span></button>
         </div>
 
           <div class="gallery">
@@ -163,14 +158,12 @@ div.desc {
               <img src="https://www.cia-france.com/media/1558/parcarou1_720x500.jpg" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">Paris<br>Comments:</div>
-            <form action="#" method="POST">
-            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
-            </textarea>
-            <input type="submit" value="submit">
+            <div id="text4"></div>
+            <form>
+              <textarea id="blogtext4" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
           </form>
-          <p>
-            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-          </p>
+          <button onclick="funkcija4()">Send</button>
+          <button id="button4" title="Love it"  onclick="Like4()"><span>&#x2764;</span></button>
         </div>
 
           <div class="gallery">
@@ -178,26 +171,136 @@ div.desc {
               <img src="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">Moscow<br>Comments:</div>
-            <form action="#" method="POST">
-            <textarea id="review" name="review" rows="7" cols="30">Write your comment here...
-            </textarea>
-            <input type="submit" value="submit">
+            <div id="text5"></div>
+            <form>
+              <textarea id="blogtext5" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
           </form>
-          <p>
-            <a href="#" title="Love it" class="btn" data-count="0"><span>&#x2764;</span></a>
-          </p>
+          <button onclick="funkcija5()">Send</button>
+          <button id="button5" title="Love it"  onclick="Like5()"><span>&#x2764;</span></button>
         </div>
           <br clear="all">
-          <!--stavanje na nova slika: -->
+          <!--stavanje na nova slika:
           <h3>Here you can upload an image:</h3>
-          <form action="#" method="post" enctype="multipart/form-data">
+          <form>
             Select image to upload:
-            <input type="file" name="fileToUpload" id="fileToUpload">
-            <input type="submit" value="Upload Image" name="submit">
-          </form>
-
+            <input id="image" type="image" name="fileToUpload">
+            <button onclick="staviSLika()">Upload</button>
+            <p id="slika"></p>
+          </form>  -->
+          <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+          <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+          <p><img id="output" width="200" /></p>
           <br clear="all"/>
           
+
+          <script type="text/javascript">
+            function funkcija1(){ 
+              var text=document.getElementById("blogtext").value;
+              var date=new Date();
+              var p=document.createElement("p");
+              p.innerText=text+'\n'+date.toUTCString();
+              document.getElementById("text").appendChild(p);         
+            }
+            var count=0;
+
+            function Like(){
+              var button=document.getElementById("button");
+                count += 1;
+                button.innerHTML ="&#10084;:" + count;
+              };
+
+              function funkcija2(){ 
+              var text=document.getElementById("blogtext2").value;
+              var date=new Date();
+              var p=document.createElement("p");
+              p.innerText=text+'\n'+date.toUTCString();
+              document.getElementById("text2").appendChild(p);         
+            }
+            var count2=0;
+            function Like2(){
+              var button=document.getElementById("button2");
+                count2 += 1;
+                button.innerHTML ="&#10084;:" + count2;
+              };
+
+              function funkcija3(){ 
+              var text=document.getElementById("blogtext3").value;
+              var date=new Date();
+              var p=document.createElement("p");
+              p.innerText=text+'\n'+date.toUTCString();
+              document.getElementById("text3").appendChild(p);         
+            }
+            
+            var count3=0;
+            function Like3(){
+              var button=document.getElementById("button3");
+                count3 += 1;
+                button.innerHTML ="&#10084;:" + count3;
+              };
+
+              function funkcija4(){ 
+              var text=document.getElementById("blogtext4").value;
+              var date=new Date();
+              var p=document.createElement("p");
+              p.innerText=text+'\n'+date.toUTCString();
+              document.getElementById("text4").appendChild(p);         
+            }
+            
+            var count4=0;
+            function Like4(){
+              var button=document.getElementById("button4");
+                count4 += 1;
+                button.innerHTML ="&#10084;:" + count4;
+              };
+
+              function funkcija5(){ 
+              var text=document.getElementById("blogtext5").value;
+              var date=new Date();
+              var p=document.createElement("p");
+              p.innerText=text+'\n'+date.toUTCString();
+              document.getElementById("text5").appendChild(p);         
+            }
+            
+            var count5=0;
+            function Like5(){
+              var button=document.getElementById("button5");
+                count5 += 1;
+                button.innerHTML ="&#10084;:" + count5;
+              };
+              function staviSLika(){
+                var slika=document.getElementById("image").value;
+                var p3=document.createElement("p");
+                p3.innerHTML=slika;
+                document.body.appendChild(p3);
+              }
+              function loadFile(){
+                var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+  
+              var button=document.createElement("BUTTON");
+              var comment=document.createElement("textarea");
+              button.innerHTML="&#10084;:";
+              comment.innerHTML="Write your comment here...";
+              comment.id="comment";
+              var send=document.createElement("button");
+              send.innerText="send";
+              var count=0;
+              button.onclick=function(){
+                count += 1;
+                button.innerHTML ="&#10084;:" + count;
+              };
+              send.onclick = function() {Comment()};
+              document.body.appendChild(button);
+              document.body.appendChild(comment);
+              document.body.appendChild(send);
+            }
+            function Comment(){
+              var p1=document.createElement("p");
+              var date=new Date();
+              p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString();
+              document.body.appendChild(p1);
+            }
+            </script>
 
     </body>
 </html>

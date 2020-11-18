@@ -85,7 +85,6 @@ li.dropdown {
             <label for="no">No</label><br>
             <input type="radio" id="not sure" name="opinion1" value="not sure">
             <label for="not sure">Note sure</label><br>
-            <input type="submit" value="submit">
           </form> 
           <br>
           <!--2 prasanje-->
@@ -95,21 +94,16 @@ li.dropdown {
             <label for="male">Male</label><br>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label><br>
-            <input type="submit" value="submit">
           </form><br><br>
           <!--3-->
           <form action="#" method="POST">
             <label for="age">What is your age?</label><br>
             <input type="text" id="age" name="age"><br>
-            <input type="submit" value="submit">
           </form>
           <!--4-->
           <p>Please tell us about yourself</p>
           <form action="#" method="POST">
-          <textarea id="review" name="review" rows="7" cols="50">
-            Write your text here...
-          </textarea>
-            <input type="submit" value="submit">
+          <textarea id="review" name="review" rows="7" cols="50" placeholder="Write your text here..."></textarea>
           </form><br>
           <!--5-->
           <p>How often do you vist my site?</p>
@@ -128,15 +122,18 @@ li.dropdown {
             <label for="notsure">Not sure</label><br>
             <input type="radio" id="other" name="visit" value="other">
             <label for="other">Other</label><br>
-            <input type="submit" value="submit">
           </form><br>
 
           <p>Do you like my site?</p>
           <form action="#" method="POST">
             <label for="rank">Rank(bewtween 1 and 5):</label>
             <input type="range" id="rank" name="rank" min="1" max ="5">
-            <input type="submit">
           </form>
-          <h3>Thank you for your feedback.</h3>
+          <button onclick="feedback()">Submit</button>
+          <script>
+            function feedback(){
+              alert("Your answers have been saved!!! \n Thank you for your feedback!!!")
+            }
+          </script>
     </body>
 </html>

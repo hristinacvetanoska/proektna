@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Blog</title>
         <style>
-            body{
-                background-color: lavender;
-                background-size: cover;
+            body,html{
+              background-color: lavender;
+                height: 100%;
+            }
+            .bg-image{
+              background-image: url("https://clickfirstmarketing.com/wp-content/uploads/blog-for-business.jpg");
+              height: 50%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+            .bg-content {
+              position: absolute;
+              background-color: rgb(238, 230, 215);
+              opacity: 0.5;
+              width: 100%;
+              bottom: 42%;
             }
             ul {
   list-style-type: none;
@@ -75,27 +90,85 @@ li.dropdown {
               <li><a href="contact.html">Contact</a></li>
             </li>
           </ul>
-          <br>
-          <h1  style="text-align: center;color: palevioletred;font-style: italic;font-weight: bolder;">Blog</h1>
+          <div class="bg-image">
+          <div class="bg-content">
+            <h1  style="text-align: center;color: rgb(32, 18, 1);font-style: italic;font-weight: bolder;">Blog</h1>
+          </div>
+        </div>
           <h2 style="text-align: left;font-style: italic;">Lake Ohrid</h2>
           <p style="text-indent: 50px;font-size: 14pt;">The fact that both the lake and the town of Ohrid are under the protection of UNESCO should say enough. Lake Ohrid is one of the oldest in the world and the town itself is precious. The Galicica National Park, located between Lake Ohrid and Lake Prespa,
              is around the corner and offers good opportunities for hiking.<br><br>The main sights of Ohrid can be seen within a day.For two euros you can also get a highly recommended self-guided city tour of Ohrid at walkingmacedonia.com.But remember,
              Ohrid and surroundings have more to offer than these tours and one day is probably not enough for you!
              Tired of all the walking and sightseeing? Lake Ohrid has quite some nice beaches!<br><br>They say Ohrid used to have 365 churches, one for each day of the year. Nowadays, there are still a lot of churches. The most famous one is St Jovan,
              on a magnificent location on the cliffs overseeing Lake Ohrid. The Cathedral of St Sofia often hosts concerts during the Ohrid Summer Festival .  </p>
-          <form action="#">
+          <form >
             <label for="fname">Text title</label><br>
             <input type="text" id="fname" name="fname" value="">
-            <br>
-            <br>
+            <input type="date" name="date" id="date">
           </form>
-          <textarea id="review" name="review" rows="7" cols="50">Write your text here...
-          </textarea>
+            <br>
+            <br>
+          <textarea id="blogtext" name="review" rows="7" cols="50" placeholder="Write your text here..."></textarea>
           <br><br>
-          <form action="#">
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date">
-            <input type="submit" value="submit">
-          </form>
+          <button  onclick="funkcija1()">Submmit</button>
+          <button onclick='download_file("my_file.txt", dynamic_text())'>Download</button>
 
-    </body>
+          <script type="text/javascript">
+            function funkcija1(){
+              var name=document.getElementById("fname").value;
+              var text=document.getElementById("blogtext").value;
+              var date=document.getElementById("date").value;
+              var p=document.createElement("p");
+              p.innerText=name+'\n'+'\n'+text+" \n \n Postaveno na: "+date;
+              document.body.appendChild(p);
+
+              var button=document.createElement("BUTTON");
+              var comment=document.createElement("textarea");
+              button.innerHTML="&#10084;:";
+              comment.innerHTML="Write your comment here...";
+              comment.id="comment";
+              var send=document.createElement("button");
+              send.innerText="send";
+              var count=0;
+              button.onclick=function(){
+                count += 1;
+                button.innerHTML ="&#10084;:" + count;
+              };
+              send.onclick = function() {Comment()};
+
+              document.body.appendChild(button);
+              document.body.appendChild(comment);
+              document.body.appendChild(send);
+            }
+            function Comment(){
+              var p1=document.createElement("p");
+              var date=new Date();
+              p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString();
+              document.body.appendChild(p1);
+            }   //&#128172;
+            
+          function dynamic_text() {
+        return document.getElementById("blogtext").value;
+    }
+
+    function download_file(name, contents, mime_type) {
+        mime_type = mime_type || "text/plain";
+
+        var blob = new Blob([contents], {type: mime_type});
+
+        var dlink = document.createElement('a');
+        dlink.download = name;
+        dlink.href = window.URL.createObjectURL(blob);
+        dlink.onclick = function(e) {
+            var that = this;
+            setTimeout(function() {
+                window.URL.revokeObjectURL(that.href);
+            }, 1500);
+        };
+
+        dlink.click();
+        dlink.remove();
+    }
+    </script>
+        </body>
+</html>
