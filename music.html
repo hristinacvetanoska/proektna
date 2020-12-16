@@ -4,6 +4,7 @@
       <meta charset="utf-8">
         <title>Music</title>
         <script src="./script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="./style.css"/>
         <style>
             body{
@@ -110,7 +111,9 @@ div.desc {
           </ul>
         <br>
         <h2 style="text-align: center; font-weight: bold;font-style: italic;">Here are my favote songs</h2>
-        <h3 style="font-style: italic;font-weight: bold;text-align: left;">Justin Bieber</h3>
+        <div id="flip">
+        <h3 style="font-style: italic;font-weight: bold;text-align: left;">Justin Bieber</h3></div>
+        <div id="panel">
         <div class="gallery">
             <a target="_blank" href="https://www.youtube.com/watch?v=TlQY-MBWHik">
               <img src="https://files.list.co.uk/images/2020/09/15/055363899c8d678bea4686d978967c0ed860e9a7.jpg" alt="Holy" width="600" height="400">
@@ -138,21 +141,23 @@ div.desc {
             </a>
             <div class="desc">Mistletoe</div>
         </div>
+      </div>
+
+
         <br clear="all"/>
-    <h3 style="font-style: italic;font-weight: bold;text-align: left;">Tose Proeski</h3>
-    <div class="gallery">
+       <h3 style="font-style: italic;font-weight: bold;text-align: left;">Tose Proeski</h3>
+        <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=7ByaJ08xO9o">
           <img src="https://mia.mk/wp-content/uploads/2019/10/Toshe-Proeski.jpg" alt="Cija si" width="600" height="400">
         </a>
         <div class="desc">Cija si</div>
-    </div>
-      
-    <div class="gallery">
+      </div>
+     <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=akNtlEC0JWQ">
           <img src="https://osijeknews.hr/wp-content/uploads/2019/10/to%C5%A1e_proeski_16102019_osijeknews.jpg" alt="Pratim te" width="600" height="400">
         </a>
         <div class="desc">Pratim te</div>
-    </div>
+     </div>
       
     <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=lmA8DKBGw3k">
@@ -178,16 +183,16 @@ div.desc {
           <img src="https://fokus.mk/wp-content/uploads/2016/10/tose-proeski-2.jpg" alt="Tajno moja" width="600" height="400">
         </a>
         <div class="desc">Tajno moja</div>
-    </div>    <div class="gallery">
+       </div>
+        <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=tOJEA7tlp8E">
           <img src="https://www.novamakedonija.com.mk/wp-content/uploads/2019/11/tose.jpg" alt="Polsko cveke" width="600" height="400">
         </a>
         <div class="desc">Polsko cveke</div>
-    </div>
+      </div>
 
     <br clear="all"/>
     <h3 style="font-style: italic;font-weight: bold;text-align: left;">Beyonce</h3>
-
     <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=foaLW5DGhpI">
           <img src="https://cdn.modernghana.com/content__/400/250/ptkw40ymm2_slide__foreign_news__beyounce_releases_broken_heart_girl.jpg" alt="Irreplaceable" width="600" height="400">
@@ -222,7 +227,6 @@ div.desc {
         </a>
         <div class="desc">Single ladies</div>
         </div>
-
         <br clear="all"/>
         <h3 style="font-style: italic;font-weight: bold;text-align: left;">Other</h3>
 
@@ -258,5 +262,17 @@ div.desc {
               <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
             </span>
           </footer>
+          <script>
+       $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+/*$(document).ready(function(){
+  $(".flip").click(function(){
+    $(this).next().find(".panel").slideToggle("slow");
+  });
+});*/
+          </script>
     </body>
 </html>
