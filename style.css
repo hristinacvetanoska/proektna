@@ -1,0 +1,15 @@
+.main-container{
+    padding: 0px 0px 0px 10px;
+    width: 30%;
+    height: 3px;
+    margin-bottom: -5px;
+    margin-top: -5px;
+  }
+#clock{
+    width: 35%;
+    padding: 0px 0px 0px 1280px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: purple;
+    font-family: 'Roboto' , sans-serif ;
+}

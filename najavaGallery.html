@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Najavuvanje</title>
+       <style>
+           body{
+               background-color: rgb(22, 22, 22);
+           }
+       </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;color: azure; font-family:'Brush Script MT', cursive;font-weight: bold; font-size: 50pt;">Instagram</h1>
+        <form style="text-align: center; height: 450px;">
+            <input type="text" id="username" placeholder="username" style="height: 10%;width: 500px; background-color: rgb(184, 182, 182); border: 5px outset  rgb(109, 107, 107);opacity: 0.7"><br><br>
+            <input type="password" id="password" placeholder="password" minlength="8" style="height: 10%;width: 500px;background-color: rgb(184, 182, 182);border: 5px outset  rgb(109, 107, 107);opacity: 0.7" required><br><br>
+            <button style="background-color:  rgb(7, 56, 78);width: 511px;height: 9%;font-size: 14pt; " onclick="najava()">Log in</button>
+        </form>
+        <script>
+            function najava(){
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                localStorage.setItem("storageName",username);
+                if(password==""){
+                    window.alert("Vnesete povtorno password");
+                }
+                else if(username==""){
+                    window.alert("Vnesete povtorno username");
+                }
+                else{
+                    window.open("gallery.html");
+                }
+
+            }
+        </script>
+          </body>
+          </html>

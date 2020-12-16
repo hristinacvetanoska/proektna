@@ -3,11 +3,27 @@
     <head>
       <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Blog</title>
+        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css"/>
         <style>
             body,html{
               background-color: lavender;
                 height: 100%;
             }
+            div.margini {
+              margin-left: 150px;
+              margin-right: 150px;
+            }
+            footer{
+  padding-bottom: 5px;
+  color: purple;
+  background-color: mistyrose;
+  word-spacing: 5px;
+  font-size: xx-large;
+ 
+  border-bottom: rgb(151, 19, 111) 5px solid;
+  bottom: -1;
+}
             .bg-image{
               background-image: url("https://clickfirstmarketing.com/wp-content/uploads/blog-for-business.jpg");
               height: 50%;
@@ -74,7 +90,7 @@ li.dropdown {
 } 
         </style>
     </head>
-    <body>
+    <body onload="realtimeClock()">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li class="dropdown">
@@ -84,7 +100,7 @@ li.dropdown {
                 <a href="food.html">Food</a>
                 <a href="film.html">Film</a>
               </div>
-              <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="najavaGallery.html">Gallery</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="visitor.html">Visitor survey</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -92,11 +108,12 @@ li.dropdown {
           </ul>
           <div class="bg-image">
           <div class="bg-content">
-            <h1  style="text-align: center;color: rgb(32, 18, 1);font-style: italic;font-weight: bolder;">Blog</h1>
+            <h1  style="text-align: center;color: rgb(32, 18, 1);font-family:'Brush Script MT', cursive;font-weight: bolder;">Blog</h1>
           </div>
         </div>
+        <div class="margini">
           <h2 style="text-align: left;font-style: italic;">Lake Ohrid</h2>
-          <p style="text-indent: 50px;font-size: 14pt;">The fact that both the lake and the town of Ohrid are under the protection of UNESCO should say enough. Lake Ohrid is one of the oldest in the world and the town itself is precious. The Galicica National Park, located between Lake Ohrid and Lake Prespa,
+          <p style="text-indent: 50px;font-size: 14pt;text-align: justify ;">The fact that both the lake and the town of Ohrid are under the protection of UNESCO should say enough. Lake Ohrid is one of the oldest in the world and the town itself is precious. The Galicica National Park, located between Lake Ohrid and Lake Prespa,
              is around the corner and offers good opportunities for hiking.<br><br>The main sights of Ohrid can be seen within a day.For two euros you can also get a highly recommended self-guided city tour of Ohrid at walkingmacedonia.com.But remember,
              Ohrid and surroundings have more to offer than these tours and one day is probably not enough for you!
              Tired of all the walking and sightseeing? Lake Ohrid has quite some nice beaches!<br><br>They say Ohrid used to have 365 churches, one for each day of the year. Nowadays, there are still a lot of churches. The most famous one is St Jovan,
@@ -112,7 +129,9 @@ li.dropdown {
           <br><br>
           <button  onclick="funkcija1()">Submmit</button>
           <button onclick='download_file("my_file.txt", dynamic_text())'>Download</button>
+          <div id="here"></div>
 
+        </div>
           <script type="text/javascript">
             function funkcija1(){
               var name=document.getElementById("fname").value;
@@ -120,7 +139,7 @@ li.dropdown {
               var date=document.getElementById("date").value;
               var p=document.createElement("p");
               p.innerText=name+'\n'+'\n'+text+" \n \n Postaveno na: "+date;
-              document.body.appendChild(p);
+              document.getElementById("here").appendChild(p);
 
               var button=document.createElement("BUTTON");
               var comment=document.createElement("textarea");
@@ -136,15 +155,15 @@ li.dropdown {
               };
               send.onclick = function() {Comment()};
 
-              document.body.appendChild(button);
-              document.body.appendChild(comment);
-              document.body.appendChild(send);
+              document.getElementById("here").appendChild(button);
+              document.getElementById("here").appendChild(comment);
+              document.getElementById("here").appendChild(send);
             }
             function Comment(){
               var p1=document.createElement("p");
               var date=new Date();
               p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString();
-              document.body.appendChild(p1);
+              document.getElementById("here").appendChild(p1);
             }   //&#128172;
             
           function dynamic_text() {
@@ -170,5 +189,16 @@ li.dropdown {
         dlink.remove();
     }
     </script>
+    <br>
+    <footer>
+      <div class="main-container">
+        <div id="clock"></div>
+      </div>
+      <span style="font-size: 18pt; text-align: left;">&copy;2020, </span><span style="font-family:'Brush Script MT', cursive;">Hristina Cvetanoska</span>
+        <span style="font-family:'Brush Script MT', cursive;padding: 0px 0px 0px 800px;font-size: 15pt;"><a href="contact.html" style="text-decoration: none;color: purple;font-size: 16pt;">Contact </a>
+          <a href="https://www.instagram.com/hristinacvetanoska/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" name="InstagramLogo" style="height:27px;"></a>
+          <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
+        </span>
+      </footer>
         </body>
 </html>

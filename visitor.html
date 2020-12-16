@@ -2,11 +2,27 @@
 <html>
     <head>
         <title>Visitor</title>
+        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css"/>
         <style>
             body{
                 background-color: lavender;
                 background-size: cover;
             }
+            div.margini {
+              margin-left: 150px;
+              margin-right: 150px;
+            }
+            footer{
+  padding-bottom: 5px;
+  color: purple;
+  background-color:mistyrose;
+  word-spacing: 5px;
+  font-size: xx-large;
+ 
+  border-bottom: rgb(151, 19, 111) 5px solid;
+  bottom: -1;
+}
             ul {
   list-style-type: none;
   margin: 0;
@@ -59,7 +75,7 @@ li.dropdown {
 } 
     </style>
 </head>
-    <body>
+    <body onload="realtimeClock()">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li class="dropdown">
@@ -69,13 +85,14 @@ li.dropdown {
                 <a href="food.html">Food</a>
                 <a href="film.html">Film</a>
               </div>
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="najavaGallery.html">Gallery</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="visitor.html">Visitor survey</a></li>
               <li><a href="contact.html">Contact</a></li>
             </li>
           </ul>
           <!--1 prasanje-->
+          <div class="margini">
           <h3>I would like to know your opinions about my website</h3>
           <p>Is this the first time you have visited our site?</p>
           <form action="#" method="POST">
@@ -130,10 +147,21 @@ li.dropdown {
             <input type="range" id="rank" name="rank" min="1" max ="5">
           </form>
           <button onclick="feedback()">Submit</button>
+        </div>
           <script>
             function feedback(){
               alert("Your answers have been saved!!! \n Thank you for your feedback!!!")
             }
           </script>
+<footer>
+  <div class="main-container">
+    <div id="clock"></div>
+  </div>
+  <span style="font-size: 18pt; text-align: left;">&copy;2020, </span><span style="font-family:'Brush Script MT', cursive;">Hristina Cvetanoska</span>
+    <span style="font-family:'Brush Script MT', cursive;padding: 0px 0px 0px 800px;font-size: 15pt;"><a href="contact.html" style="text-decoration: none;color: purple;font-size: 16pt;">Contact </a>
+      <a href="https://www.instagram.com/hristinacvetanoska/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" name="InstagramLogo" style="height:27px;"></a>
+      <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
+    </span>
+  </footer>
     </body>
 </html>

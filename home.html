@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <meta charset="utf-8">
-        <title>Home</title>
-        <style>
-            body{
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<script src="./script.js"></script>
+<link rel="stylesheet" href="./style.css"/>
+<style>
+body{
                 background-color: lavender;
                 background-size: cover;
             }
+
+            div.margini {
+              margin-left: 150px;
+              margin-right: 150px;
+            }
+            footer{
+  padding-bottom: 5px;
+  color: purple;
+  background-color: mistyrose;
+  word-spacing: 5px;
+  font-size: xx-large;
+ 
+  border-bottom: rgb(151, 19, 111) 5px solid;
+  bottom: -1;
+}
             ul {
   list-style-type: none;
   margin: 0;
@@ -61,7 +78,7 @@ li.dropdown {
 
         </style>
     </head>
-    <body >
+    <body onload="realtimeClock()">
     <marquee scrollamount="3" direction="right" behavior="scroll">WELCOME TO MY WEBSITE</marquee>
     <br>
     <ul>
@@ -73,21 +90,22 @@ li.dropdown {
             <a href="food.html">Food</a>
             <a href="film.html">Film</a>
           </div>
-          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="najavaGallery.html">Gallery</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="visitor.html">Visitor survey</a></li>
           <li><a href="contact.html">Contact</a></li>
         </li>
       </ul>
       <br>
-      <h3 style="text-align: left">CV<img  src="https://scontent.fskp4-2.fna.fbcdn.net/v/t31.0-8/30946355_1864287066928907_2217386148257113868_o.jpg?_nc_cat=110&ccb=2&_nc_sid=174925&_nc_ohc=H8aSc6ROHdsAX9qj4DO&_nc_ht=scontent.fskp4-2.fna&oh=fcad5ac9b023ccc0dfa64cacf33e8d46&oe=5FBD21C0" alt="girl" style="float: right; width: 214px; height: 300px;padding: 0 820px 0px 0;">
+      <div class="margini">
+      <h3><span  style="text-align: left">CV</span><img  src="https://scontent.fskp4-2.fna.fbcdn.net/v/t1.0-9/120563890_3579796272044636_1969566928806175634_o.jpg?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_ohc=AxyF144ZB9oAX_LAa-7&_nc_ht=scontent.fskp4-2.fna&oh=b5b3a0069af280c12d357bb3ef870e38&oe=5FFAB4C5" alt="girl" style="float: right; width: 250px; height: 270px;padding: 0 220px 0px 0;">
       </h3>
      <p style="font-size: 14pt;text-align: left;">Name:Hristina<br>Surname:Cvetanoska<br>Phone number:072 273 105 <br> Date of birth: 24.01.2000<br>Place of birth:Bitola<br>
       Email:hristina2401@yahoo.com</p><br><br><br><br><br>
      <p style="font-style: italic;font-weight: bold;font-size:  16pt;">Education:</p>
      <ol style="list-style-type:circle;">
      <li style="font-weight: lighter;font-style: normal;font-size: 14pt;">Faculty of 
-      Electrical Engineering and Information Technologies (FEEIT) at SS.Cyril and Methodius University &emsp;&emsp;&emsp;&emsp;&emsp;(2018-)<br>
+      Electrical Engineering and Information Technologies (FEEIT) at SS.Cyril and Methodius University &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(2018-)<br>
       Third year of the study program Computer Technologies and Engineering
   </ol> <br clear="all"/>
   <p style="font-style: italic;font-weight: bold;font-size:  16pt;">Foreign languages:</p>
@@ -102,13 +120,25 @@ li.dropdown {
     <li style="font-weight: lighter;font-style: normal;font-size: 14pt;">Reading</li><br clear="all"/>
     <li style="font-weight: lighter;font-style: normal;font-size: 14pt;">Cycling</li><br clear="all"/>
   </ol>
-     <p style="text-align: center;font-size: 16pt;"><b><em>About me</em></b><br></p>
-     <p style="font-size: 14pt;text-indent: 50px;">I am person who is positive about every aspect of life.
+     <section style="padding: 220px 0px 0px 0;">
+      <p style="text-align: center;font-size: 16pt;"><b><em>About me</em></b><br></p>
+     <p style="font-size: 14pt;text-indent: 50px;text-align: justify;">I am person who is positive about every aspect of life.
         My friends say that I am a very funny and an interesting girl with a good sense of humor.
         I believe that friendship is one of the most important values in human life. We exchange new ideas,
         find many interesting things about each other and experience new things.
         I appreciate friendship and people who surround me.I am able to handle multiple tasks on a daily basis also I use creative approach to problem solve.I can say that I am a responsible and a hard-working student.
     </p><br>
-    </body>
-
+  </section>
+  </div>
+<footer>
+  <div class="main-container">
+    <div id="clock"></div>
+  </div>
+  <span style="font-size: 18pt; text-align: left;">&copy;2020, </span><span style="font-family:'Brush Script MT', cursive;">Hristina Cvetanoska</span>
+    <span style="font-family:'Brush Script MT', cursive;padding: 0px 0px 0px 800px;font-size: 15pt;"><a href="contact.html" style="text-decoration: none;color: purple;font-size: 16pt;">Contact </a>
+      <a href="https://www.instagram.com/hristinacvetanoska/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" name="InstagramLogo" style="height:27px;"></a>
+      <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
+    </span>
+  </footer>
+</body>
 </html>

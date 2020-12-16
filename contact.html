@@ -2,11 +2,26 @@
 <html>
     <head>
         <title>Contact</title>
+        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css"/>
         <style>
             body{
                 background-color: lavender;
                 background-size: cover;
             }
+            div.margini {
+              margin-left: 150px;
+              margin-right: 150px;
+            }            footer{
+  padding-bottom: 5px;
+  color: purple;
+  background-color:mistyrose;
+  word-spacing: 5px;
+  font-size: xx-large;
+ 
+  border-bottom: rgb(151, 19, 111) 5px solid;
+  bottom: -1;
+}
             ul {
   list-style-type: none;
   margin: 0;
@@ -59,7 +74,7 @@ li.dropdown {
 }    
         </style>
     </head>
-    <body>
+    <body onload="realtimeClock()">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li class="dropdown">
@@ -69,15 +84,43 @@ li.dropdown {
                 <a href="food.html">Food</a>
                 <a href="film.html">Film</a>
               </div>
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="najavaGallery.html">Gallery</a></li>
               <li><a href="blog.html">Blog</a></li>
               <li><a href="visitor.html">Visitor survey</a></li>
               <li><a href="contact.html">Contact</a></li>
             </li>
           </ul>
-          <br><br>
-          <p style="font-size: 14pt;">Phone number:072 273 105</p>
-          <p style="font-size: 14pt;">E_mail:hristina2401@yahoo.com</p><br>
-          <p style="font-size: 14pt;">Facebook:<a href="https://www.facebook.com/hristina.cvetanoska.7">Hristina Cvetanoska</a></p><br>
-          <p style="font-size: 14pt;">Instagram:<a href="https://www.instagram.com/hristinacvetanoska/">Hristina Cvetanoska</a></p>
+          <div class="margini">
+          <p style="text-align: center;font-family:'Brush Script MT', cursive; font-size: 30pt;border-bottom: 3px double gray;">Contact</p>
+          <div style="display:inline-block;vertical-align:top;">
+            <img src="https://scontent.fskp4-2.fna.fbcdn.net/v/t1.0-9/82162052_2873109732713297_7218273280635961344_o.jpg?_nc_cat=100&ccb=2&_nc_sid=174925&_nc_ohc=u72qT4ogle4AX8L2mI_&_nc_ht=scontent.fskp4-2.fna&oh=c48cf06bd5123a80ef71d4dc83509f9f&oe=5FFED3AD" 
+            style="width: 390px; height: 500px;" alt="img"/>
+        </div>
+        <div style="display:inline-block; padding: 0px 0px 0px 60px;">
+          <p style="font-size: 14pt; font-family: cursive;">Phone number:072 273 105</p>
+          <p style="font-size: 14pt; font-family: cursive;">E_mail:hristina2401@yahoo.com</p><br>
+          <p style="font-size: 14pt; font-family: cursive;">Facebook:<a href="https://www.facebook.com/hristina.cvetanoska.7">Hristina Cvetanoska</a></p><br>
+          <p style="font-size: 14pt; font-family: cursive;">Instagram:<a href="https://www.instagram.com/hristinacvetanoska/">Hristina Cvetanoska</a></p>
+          <img src="https://media.tenor.com/images/2ab4c232d7922ad8a433d32682eca5fc/tenor.gif" alt="butterflygif" style="width: 200px; height: 300px;padding: 0px 0px 0px 520px;">
+        </div>
+            <section style="border-top: 3px solid gray;">
+              <br>
+            <iframe id="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.1931197975664!2d21.426765315394082!3d41.99613077921291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415b496cf18b7%3A0xdeedbcc8468b9242!2z0JzQsNC60YHQuNC8INCT0L7RgNC60LgsINCh0LrQvtC_0ZjQtSAxMDAw!5e0!3m2!1smk!2smk!4v1608071135877!5m2!1smk!2smk" 
+            frameborder="0" style="border:0; width: 400px; height: 400px; padding: 0px 0px 0px 350px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+
+          </div>
+          <section style="padding: 320px 0px 0px 0;">
+          <footer>
+            <div class="main-container">
+              <div id="clock"></div>
+            </div>
+            <span style="font-size: 18pt; text-align: left;">&copy;2020, </span><span style="font-family:'Brush Script MT', cursive;">Hristina Cvetanoska</span>
+              <span style="font-family:'Brush Script MT', cursive;padding: 0px 0px 0px 800px;font-size: 15pt;"><a href="contact.html" style="text-decoration: none;color: purple;font-size: 16pt;">Contact </a>
+                <a href="https://www.instagram.com/hristinacvetanoska/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" name="InstagramLogo" style="height:27px;"></a>
+                <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
+              </span>
+            </footer>
+          </section>
     </body>

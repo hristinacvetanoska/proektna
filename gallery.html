@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta charset="utf-8">
         <title>Gallery</title>
+        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css"/>
         <style>
             body{
                 background-color: lavender;
                 background-size: cover;
             }
+            footer{
+  padding-bottom: 5px;
+  color: purple;
+  background-color: mistyrose;
+  word-spacing: 5px;
+  font-size: xx-large;
+ 
+  border-bottom: rgb(151, 19, 111) 5px solid;
+  bottom: -1;
+}
+            div.margini {
+              margin-left: 150px;
+              margin-right: 150px;
+            }
+            img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
             ul {
   list-style-type: none;
   margin: 0;
@@ -63,6 +90,12 @@ div.gallery {
   float: left;
   width: 280px;
 }
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
 
 div.gallery:hover {
   border: 1px solid #777;
@@ -94,7 +127,7 @@ div.desc {
 
 </style>
     </head>
-    <body>
+    <body onload="realtimeClock()">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li class="dropdown">
@@ -110,96 +143,133 @@ div.desc {
               <li><a href="contact.html">Contact</a></li>
             </li>
           </ul>
+          <div class="margini">
+          <img src="https://scontent.fskp4-2.fna.fbcdn.net/v/t1.0-9/120563890_3579796272044636_1969566928806175634_o.jpg?_nc_cat=109&ccb=2&_nc_sid=09cbfe&_nc_ohc=AxyF144ZB9oAX-WOwZA&_nc_ht=scontent.fskp4-2.fna&oh=f2965282851646ba7b733c9ea8e57ef5&oe=5FFEA945" style="border-radius: 50%;height: 170px;width: 170px; float: left; margin: 10px 70px 0px 0px">
+          <table style="width: 33%;">
+            <tr>
+              <th><span  id="UName" style="font-size: xx-large; font-weight: lighter;"></span></th>
+              <th><button><span style="font-weight: bold;">Edit Profile</span></button></th>
+            </tr>
+            <tr>
+              <td style="font-size: 20pt"><span style="font-weight: bolder;">5 </span>posts</td>
+              <td style="font-size: 20pt"><span style="font-weight: bolder;">2M </span>followers</td>
+              <td style="font-size: 20pt"><span style="font-weight: bolder;">0 </span>following</td>    
+            </tr>
+          </table>
+              
          <marquee direction="right" scrollamount="3"> <h1 style="text-align: center;font-style: oblique;color: orchid;">Welcome to my gallery!</h1></marquee>
-          <!--Slikite za vo galerijata: -->
-          <div class="gallery">
-            <a target="_blank">
-              <img src="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg" alt="Forest" width="600" height="400">
-            </a>
-            <div class="desc">Ohrid<br>Comments:</div>
-            <div id="text"></div>
-            <form>
-            <textarea id="blogtext" name="review" rows="5" cols="15" placeholder="Write your comment here..."></textarea>
-          </form>
-            <button onclick="funkcija1()">Send</button>
-            <button id="button" title="Love it" onclick="Like()"><span>&#x2764;</span></button>
-          
+          <table style="border-top: 3px double gray;">
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg">
+                <img src="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg" alt="Forest" style="width: 400px; height: 300px;">
+                </a>
+                <form>
+                  <textarea id="blogtext" name="review" rows="5" cols="15" placeholder="Write your comment here..."></textarea>
+                </form>
+                  <button onclick="funkcija1()">Send</button>
+                  <button id="button" title="Love it" onclick="Like()"><span>&#x2764;</span></button>
+                  <div id="text"></div>
+                  <p id="com1"></p>
+              </td>
+              <td>
+                <a target="_blank" href="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg">
+                <img src="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg" alt="Forest" style="width: 400px; height: 300px;">
+                </a>
+                <form>
+                <textarea id="blogtext2" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+                </form>
+                <button onclick="funkcija2()">Send</button>
+                <button id="button2" title="Love it"  onclick="Like2()"><span>&#x2764;</span></button>
+                <div id="text2"></div>
+                <p id="com2"></p>
+              </td>
+              <td>
+                <a target="_blank" href="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg">
+                <img src="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg" alt="Forest" style="width: 400px; height: 300px;">
+                </a>
+                <form>
+                  <textarea id="blogtext3" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+                </form>
+              <button onclick="funkcija3()">Send</button>
+              <button id="button3" title="Love it"  onclick="Like3()"><span>&#x2764;</span></button>
+              <div id="text3"></div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg">
+                <img src="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg" alt="Forest" style="width: 400px; height: 300px;">
+                </a>
+                <form>
+                  <textarea id="blogtext5" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+              </form>
+              <button onclick="funkcija5()">Send</button>
+              <button id="button5" title="Love it"  onclick="Like5()"><span>&#x2764;</span></button>
+              <div id="text5"></div>
+              </td>
+              <td>
+                <a target="_blank" href="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg">
+                <img src="https://cdn.londonandpartners.com/visit/general-london/areas/river/76709-640x360-houses-of-parliament-and-london-eye-on-thames-from-above-640.jpg" alt="Forest" style="width: 400px; height: 300px;">
+              </a>
+                <form>
+                  <textarea id="blogtext6" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+              </form>
+              <button onclick="funkcija6()">Send</button>
+              <button id="button6" title="Love it"  onclick="Like6()"><span>&#x2764;</span></button>
+              <div id="text6"></div>  
+            </td>
+              <td>
+                <img id="output" style="width: 400px; height: 300px;">
+                <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                <div class="imgcoment"></div>
+                <label for="file" style="cursor: pointer; float:right">Upload Image</label></p>
+              </td>
+            </tr>
+          </table>
         </div>
-
-
-          <div class="gallery">
-            <a target="_blank">
-              <img src="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg" alt="Forest" width="600" height="400">
-            </a>
-            <div class="desc">Skopje<br>Comments:</div>
-            <div id="text2"></div>
-            <form>
-            <textarea id="blogtext2" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
-            </form>
-            <button onclick="funkcija2()">Send</button>
-            <button id="button2" title="Love it"  onclick="Like2()"><span>&#x2764;</span></button>
-        </div>
-
-          <div class="gallery">
-            <a target="_blank">
-              <img src="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg" alt="Forest" width="600" height="400">
-            </a>
-            <div class="desc">Venice<br>Comments:</div>
-            <div id="text3"></div>
-            <form>
-              <textarea id="blogtext3" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
-            </form>
-          <button onclick="funkcija3()">Send</button>
-          <button id="button3" title="Love it"  onclick="Like3()"><span>&#x2764;</span></button>
-        </div>
-
-          <div class="gallery">
-            <a target="_blank">
-              <img src="https://www.cia-france.com/media/1558/parcarou1_720x500.jpg" alt="Forest" width="600" height="400">
-            </a>
-            <div class="desc">Paris<br>Comments:</div>
-            <div id="text4"></div>
-            <form>
-              <textarea id="blogtext4" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
-          </form>
-          <button onclick="funkcija4()">Send</button>
-          <button id="button4" title="Love it"  onclick="Like4()"><span>&#x2764;</span></button>
-        </div>
-
-          <div class="gallery">
-            <a target="_blank">
-              <img src="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg" alt="Forest" width="600" height="400">
-            </a>
-            <div class="desc">Moscow<br>Comments:</div>
-            <div id="text5"></div>
-            <form>
-              <textarea id="blogtext5" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
-          </form>
-          <button onclick="funkcija5()">Send</button>
-          <button id="button5" title="Love it"  onclick="Like5()"><span>&#x2764;</span></button>
-        </div>
-          <br clear="all">
-          <!--stavanje na nova slika:
-          <h3>Here you can upload an image:</h3>
-          <form>
-            Select image to upload:
-            <input id="image" type="image" name="fileToUpload">
-            <button onclick="staviSLika()">Upload</button>
-            <p id="slika"></p>
-          </form>  -->
-          <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
-          <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
-          <p><img id="output" width="200" /></p>
-          <br clear="all"/>
-          
+        <footer>
+          <div class="main-container">
+            <div id="clock"></div>
+          </div>
+          <span style="font-size: 18pt; text-align: left;">&copy;2020, </span><span style="font-family:'Brush Script MT', cursive;">Hristina Cvetanoska</span>
+            <span style="font-family:'Brush Script MT', cursive;padding: 0px 0px 0px 800px;font-size: 15pt;"><a href="contact.html" style="text-decoration: none;color: purple;font-size: 16pt;">Contact </a>
+              <a href="https://www.instagram.com/hristinacvetanoska/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" name="InstagramLogo" style="height:27px; width: 27px;"></a>
+              <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;width: 27px;"></a> 
+            </span>
+          </footer>
 
           <script type="text/javascript">
+          /*const onLoad = () => {
+            if (localStorage.getItem('comments1'))
+
+            var json1 = JSON.parse(localStorage.getItem('comments1'));
+            let string1 = "";
+            for (var i = 0; i < json1.length; i++) {
+                var obj1 = json1[i];
+                let st1 = JSON.stringify(obj1);
+                string1 += st1;
+                string1 += "<hr>";
+            }
+            if (localStorage.getItem('comments2'))
+                var json2 = JSON.parse(localStorage.getItem('comments2'));
+
+            let string2 = "";
+            for (var i = 0; i < json2.length; i++) {
+                var obj2 = json2[i];
+                let st2 = JSON.stringify(obj2);
+                string2 += st2;
+                string2 += "<hr>";
+            }
+            document.getElementById("text").innerHTML = string1;
+            document.getElementById("com2").innerHTML = string2;
+        }*/
             function funkcija1(){ 
-              var text=document.getElementById("blogtext").value;
+             var text=document.getElementById("blogtext").value;
               var date=new Date();
               var p=document.createElement("p");
               p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text").appendChild(p);         
+              document.getElementById("text").appendChild(p);   
             }
             var count=0;
 
@@ -267,40 +337,43 @@ div.desc {
                 count5 += 1;
                 button.innerHTML ="&#10084;:" + count5;
               };
-              function staviSLika(){
+              function funkcija6(){ 
+              var text=document.getElementById("blogtext6").value;
+              var date=new Date();
+              var p=document.createElement("p");
+              p.innerText=text+'\n'+date.toUTCString();
+              document.getElementById("text6").appendChild(p);         
+            }
+              var count6=0;
+              function Like6(){
+              var button=document.getElementById("button6");
+                count6 += 1;
+                button.innerHTML ="&#10084;:" + count6;
+              };
+              /*function staviSLika(){
                 var slika=document.getElementById("image").value;
                 var p3=document.createElement("p");
                 p3.innerHTML=slika;
                 document.body.appendChild(p3);
-              }
+              }*/
               function loadFile(){
                 var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-  
-              var button=document.createElement("BUTTON");
-              var comment=document.createElement("textarea");
-              button.innerHTML="&#10084;:";
-              comment.innerHTML="Write your comment here...";
-              comment.id="comment";
-              var send=document.createElement("button");
-              send.innerText="send";
-              var count=0;
-              button.onclick=function(){
-                count += 1;
-                button.innerHTML ="&#10084;:" + count;
-              };
-              send.onclick = function() {Comment()};
-              document.body.appendChild(button);
-              document.body.appendChild(comment);
-              document.body.appendChild(send);
+	              image.src = URL.createObjectURL(event.target.files[0]);
             }
-            function Comment(){
+
+           /* function Comment(){
               var p1=document.createElement("p");
               var date=new Date();
-              p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString();
-              document.body.appendChild(p1);
-            }
-            </script>
+              var comment=document.createElement("textarea");
+              comment.id="comment";
+              var send=document.createElement("button");
+              p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString()+send;
+              document.getElementById("upload").appendChild(p1);
+            }*/
+            window.onload=function username(){
+              document.getElementById("UName").innerHTML=localStorage.getItem("storageName");         
+                }
+          </script>
 
     </body>
 </html>
