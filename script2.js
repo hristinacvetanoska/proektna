@@ -13,7 +13,7 @@ localStorage.setItem('datumi', JSON.stringify(dateArray));
 localStorage.setItem('titleS', JSON.stringify(titleArray));
 localStorage.setItem('items', JSON.stringify(itemsArray));
 
-function liMaker(text) {
+function olMaker(text) {
   const p = document.createElement('p');
   p.textContent = text;
   ol.appendChild(p);
@@ -33,13 +33,13 @@ form.addEventListener('submit', function (e) {
 
 
   //proba3
-  liMaker(naslov.value);
+  olMaker(naslov.value);
   naslov.value = "";
 
-  liMaker(date.value);
+  olMaker(date.value);
   date.value = "";
 
-  liMaker(input.value);
+  olMaker(input.value);
   input.value = "";
 });
 for( var j=0;j<itemsArray.length;j++){

@@ -133,7 +133,7 @@ li.dropdown {
     <button type="submit">Submmit</button>
   </form>
 
-  <h2>Items</h2>
+  <h2>New posts</h2>
   <ol id="ol:lista"></ol>
 
   <button id="button:brisenje">Clear All</button>
@@ -142,15 +142,6 @@ li.dropdown {
           
           
              <form >
-            <label for="fname">Text title</label><br>
-            <input type="text" id="fname" name="fname" value="">
-            <input type="date" name="date" id="date">
-          </form>
-            <br>
-            <br>
-          <textarea id="blogtext" name="review" rows="7" cols="50" placeholder="Write your text here..."></textarea>
-          <br><br>
-          <button  onclick="funkcija1()">Submmit</button>
           <button onclick='download_file("my_file.txt", dynamic_text())'>Download</button>
           <div id="here"></div>
 
@@ -159,41 +150,8 @@ li.dropdown {
 
         </div>
           <script type="text/javascript">
-            function funkcija1(){
-              var name=document.getElementById("fname").value;
-              var text=document.getElementById("blogtext").value;
-              var date=document.getElementById("date").value;
-              var p=document.createElement("p");
-              p.innerText=name+'\n'+'\n'+text+" \n \n Postaveno na: "+date;
-              document.getElementById("here").appendChild(p);
-
-              var button=document.createElement("BUTTON");
-              var comment=document.createElement("textarea");
-              button.innerHTML="&#10084;:";
-              comment.innerHTML="Write your comment here...";
-              comment.id="comment";
-              var send=document.createElement("button");
-              send.innerText="send";
-              var count=0;
-              button.onclick=function(){
-                count += 1;
-                button.innerHTML ="&#10084;:" + count;
-              };
-              send.onclick = function() {Comment()};
-
-              document.getElementById("here").appendChild(button);
-              document.getElementById("here").appendChild(comment);
-              document.getElementById("here").appendChild(send);
-            }
-            function Comment(){
-              var p1=document.createElement("p");
-              var date=new Date();
-              p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString();
-              document.getElementById("here").appendChild(p1);
-            }   //&#128172;
-            
           function dynamic_text() {
-        return document.getElementById("blogtext").value;
+        return document.getElementById("item").value;
     }
 
     function download_file(name, contents, mime_type) {
@@ -219,15 +177,17 @@ li.dropdown {
     <script src="script2.js"></script>
     <br clear="all">
     <br>
-
+    <br>
+    <section style="padding: 0px 0px 800px 0px"></section>
     <footer>
       <div class="main-container">
-        <div id="clock"></div>
+        <div id="clock" ></div>
       </div>
       <span style="font-size: 18pt; text-align: left;">&copy;2020, </span><span style="font-family:'Brush Script MT', cursive;">Hristina Cvetanoska</span>
         <span style="font-family:'Brush Script MT', cursive;padding: 0px 0px 0px 800px;font-size: 15pt;"><a href="contact.html" style="text-decoration: none;color: purple;font-size: 16pt;">Contact </a>
           <a href="https://www.instagram.com/hristinacvetanoska/"><img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-512.png" name="InstagramLogo" style="height:27px;"></a>
           <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
+
         </span>
       </footer>
         </body>

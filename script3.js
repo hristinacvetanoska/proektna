@@ -33,7 +33,8 @@ B.onclick=function(){
   localStorage.setItem('likes',count);
 };
 B.innerHTML=localStorage.getItem('likes');
-document.getElementById('item2').appendChild(B);
+document.getElementById('kopceLike').appendChild(B);
+
 
 button.addEventListener('click', function () {
   localStorage.clear();
