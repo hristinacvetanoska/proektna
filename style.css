@@ -13,14 +13,15 @@
     color: purple;
     font-family: 'Roboto' , sans-serif ;
 }
-#panel, #flip {
-  padding: 10px;
-  text-align: center;
-  background-color: #f5d9f8;
-  border: solid 1px #f5d9f8;
+.panel,.flip
+{
+padding:5px;
+text-align:center;
+background-color:#fcdcfd;
+border:solid 1px #c3c3c3;
 }
-
-#panel {
-  padding: 0px;
-  display: none;
+.panel
+{
+padding: 0px;
+display:none;
 }

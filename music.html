@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./style.css"/>
         <style>
             body{
-                background-color:lavender;
+                background-image: url("https://wallpapercave.com/wp/wp2758145.gif");
                 background-size: cover;
             }
             footer{
@@ -110,10 +110,9 @@ div.desc {
             </li>
           </ul>
         <br>
-        <h2 style="text-align: center; font-weight: bold;font-style: italic;">Here are my favote songs</h2>
-        <div id="flip">
-        <h3 style="font-style: italic;font-weight: bold;text-align: left;">Justin Bieber</h3></div>
-        <div id="panel">
+        <h2 style="text-align: center; font-weight: bold;font-style: italic;color: white;">Here are my favote songs</h2>
+        <h3  class="flip" style="font-style: italic;font-weight: bold;text-align: left;">Justin Bieber</h3>
+        <div class="panel">
         <div class="gallery">
             <a target="_blank" href="https://www.youtube.com/watch?v=TlQY-MBWHik">
               <img src="https://files.list.co.uk/images/2020/09/15/055363899c8d678bea4686d978967c0ed860e9a7.jpg" alt="Holy" width="600" height="400">
@@ -142,10 +141,9 @@ div.desc {
             <div class="desc">Mistletoe</div>
         </div>
       </div>
-
-
-        <br clear="all"/>
-       <h3 style="font-style: italic;font-weight: bold;text-align: left;">Tose Proeski</h3>
+      <br clear="all"/>
+       <h3 class="flip" style="font-style: italic;font-weight: bold;text-align: left;">Tose Proeski</h3>
+       <div class="panel">
         <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=7ByaJ08xO9o">
           <img src="https://mia.mk/wp-content/uploads/2019/10/Toshe-Proeski.jpg" alt="Cija si" width="600" height="400">
@@ -190,9 +188,11 @@ div.desc {
         </a>
         <div class="desc">Polsko cveke</div>
       </div>
+    </div>
 
     <br clear="all"/>
-    <h3 style="font-style: italic;font-weight: bold;text-align: left;">Beyonce</h3>
+    <h3 class="flip" style="font-style: italic;font-weight: bold;text-align: left;">Beyonce</h3>
+    <div class="panel">
     <div class="gallery">
         <a target="_blank" href="https://www.youtube.com/watch?v=foaLW5DGhpI">
           <img src="https://cdn.modernghana.com/content__/400/250/ptkw40ymm2_slide__foreign_news__beyounce_releases_broken_heart_girl.jpg" alt="Irreplaceable" width="600" height="400">
@@ -227,9 +227,9 @@ div.desc {
         </a>
         <div class="desc">Single ladies</div>
         </div>
+      </div>
         <br clear="all"/>
-        <h3 style="font-style: italic;font-weight: bold;text-align: left;">Other</h3>
-
+        <h3 style="font-style: italic;font-weight: bold;text-align: left;color: azure;">Other</h3>
         <div class="gallery">
             <a target="_blank" href="https://www.youtube.com/watch?v=_BJwqdYc6Fs">
               <img src="https://bregalnicki.mk/wp-content/uploads/2019/12/petar_graso.jpg" alt="Ako te pitaju" width="600" height="400">
@@ -252,6 +252,7 @@ div.desc {
         </div>
         <br clear="all">
         <br>
+        <section style="padding: 0px 0px 220px 0px"></section>
         <footer>
           <div class="main-container">
             <div id="clock"></div>
@@ -262,12 +263,18 @@ div.desc {
               <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;"></a> 
             </span>
           </footer>
-          <script>
-       $(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").slideToggle("slow");
+          <script type="text/javascript">
+ /* $(document).ready(function(){
+  $(".flip").click(function(){
+    $(".panel").slideToggle("slow");
   });
-});
+}); */
+
+$(".flip").click(function(){
+  $flip = $(this);
+    $content = $flip.next();
+    $content.slideToggle();
+  });
 /*$(document).ready(function(){
   $(".flip").click(function(){
     $(this).next().find(".panel").slideToggle("slow");

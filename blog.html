@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
+      <meta charset="utf-8">
       <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Blog</title>
+        <link rel="stylesheet" href="style2.css">
         <script src="./script.js"></script>
         <link rel="stylesheet" href="./style.css"/>
         <style>
@@ -118,7 +120,28 @@ li.dropdown {
              Ohrid and surroundings have more to offer than these tours and one day is probably not enough for you!
              Tired of all the walking and sightseeing? Lake Ohrid has quite some nice beaches!<br><br>They say Ohrid used to have 365 churches, one for each day of the year. Nowadays, there are still a lot of churches. The most famous one is St Jovan,
              on a magnificent location on the cliffs overseeing Lake Ohrid. The Cathedral of St Sofia often hosts concerts during the Ohrid Summer Festival .  </p>
-          <form >
+          
+             <!--Za zacuvuvanje-->
+<div class="small-container">
+  <h1>New Text</h1>
+  <form id="form:enter">
+    <label for="fname:naslov">Text title</label><br>
+    <input type="text" id="fname:naslov" name="fname" value="">
+    <input type="date" name="date" id="date:date">
+
+    <textarea id="item"name="review" rows="7" cols="50" placeholder="Write your text here..."></textarea>
+    <button type="submit">Submmit</button>
+  </form>
+
+  <h2>Items</h2>
+  <ol id="ol:lista"></ol>
+
+  <button id="button:brisenje">Clear All</button>
+</div>
+          
+          
+          
+             <form >
             <label for="fname">Text title</label><br>
             <input type="text" id="fname" name="fname" value="">
             <input type="date" name="date" id="date">
@@ -130,6 +153,9 @@ li.dropdown {
           <button  onclick="funkcija1()">Submmit</button>
           <button onclick='download_file("my_file.txt", dynamic_text())'>Download</button>
           <div id="here"></div>
+
+
+
 
         </div>
           <script type="text/javascript">
@@ -188,8 +214,12 @@ li.dropdown {
         dlink.click();
         dlink.remove();
     }
+    
     </script>
+    <script src="script2.js"></script>
+    <br clear="all">
     <br>
+
     <footer>
       <div class="main-container">
         <div id="clock"></div>

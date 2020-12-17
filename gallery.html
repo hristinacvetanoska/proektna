@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
       <meta charset="utf-8">
+      <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Gallery</title>
         <script src="./script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="./style.css"/>
+        <link rel="stylesheet" href="./style2.css"/>
         <style>
             body{
                 background-color: lavender;
@@ -127,7 +130,7 @@ div.desc {
 
 </style>
     </head>
-    <body onload="realtimeClock()">
+    <body onload="realtimeClock()" onload="onLoad">
         <ul>
             <li><a href="home.html">Home</a></li>
             <li class="dropdown">
@@ -164,67 +167,53 @@ div.desc {
                 <a target="_blank" href="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg">
                 <img src="https://www.telegraph.co.uk/content/dam/Travel/2016/September/macedonia-main-AP73865575-xlarge.jpg" alt="Forest" style="width: 400px; height: 300px;">
                 </a>
-                <form>
-                  <textarea id="blogtext" name="review" rows="5" cols="15" placeholder="Write your comment here..."></textarea>
-                </form>
-                  <button onclick="funkcija1()">Send</button>
+
+                <div class="small-container">
+
+                  <form onsubmit="comment1()">
+                    <input type="text" id="com1" placeholder="Write your comment here...">
+                  </form>
+                  <h5>Comments</h5>
+                  <div id="tuka"></div>
+                  <ol id="ol:kom1"></ol>
+
+                  </div>
                   <button id="button" title="Love it" onclick="Like()"><span>&#x2764;</span></button>
                   <div id="text"></div>
                   <p id="com1"></p>
               </td>
               <td>
+                <div class="small-container">
+                  <form id="form:enter1">
                 <a target="_blank" href="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg">
                 <img src="https://www.eu-startups.com/wp-content/uploads/2020/04/Skopje-city-image.jpg" alt="Forest" style="width: 400px; height: 300px;">
                 </a>
                 <form>
-                <textarea id="blogtext2" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+                <input id="item1" name="review" rows="3" cols="15" placeholder="Write your comment here..."></input>
+                <button type="submit">Submmit</button>
+                <button id="button2"></button>
                 </form>
-                <button onclick="funkcija2()">Send</button>
-                <button id="button2" title="Love it"  onclick="Like2()"><span>&#x2764;</span></button>
-                <div id="text2"></div>
-                <p id="com2"></p>
-              </td>
-              <td>
-                <a target="_blank" href="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg">
-                <img src="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/VCE/rialto-europe-bridge-245507692.jpg.image.750.563.low.jpg" alt="Forest" style="width: 400px; height: 300px;">
-                </a>
-                <form>
-                  <textarea id="blogtext3" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
-                </form>
-              <button onclick="funkcija3()">Send</button>
-              <button id="button3" title="Love it"  onclick="Like3()"><span>&#x2764;</span></button>
-              <div id="text3"></div>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <a target="_blank" href="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg">
-                <img src="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg" alt="Forest" style="width: 400px; height: 300px;">
-                </a>
-                <form>
-                  <textarea id="blogtext5" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
+                
               </form>
-              <button onclick="funkcija5()">Send</button>
-              <button id="button5" title="Love it"  onclick="Like5()"><span>&#x2764;</span></button>
-              <div id="text5"></div>
+                <h2 class="flip">Comments</h2>
+                <div class="panel">
+                <ol id="ol:lista1"></ol>
+                </div>
+                  <button id="button:brisenje1">Clear All</button>
+              </div>
+
               </td>
-              <td>
-                <a target="_blank" href="https://www.wallpaperup.com/uploads/wallpapers/2012/02/09/1065/3861804a49f2dd265802b293b7911680-700.jpg">
-                <img src="https://cdn.londonandpartners.com/visit/general-london/areas/river/76709-640x360-houses-of-parliament-and-london-eye-on-thames-from-above-640.jpg" alt="Forest" style="width: 400px; height: 300px;">
-              </a>
-                <form>
-                  <textarea id="blogtext6" name="review" rows="3" cols="15" placeholder="Write your comment here..."></textarea>
-              </form>
-              <button onclick="funkcija6()">Send</button>
-              <button id="button6" title="Love it"  onclick="Like6()"><span>&#x2764;</span></button>
-              <div id="text6"></div>  
-            </td>
               <td>
                 <img id="output" style="width: 400px; height: 300px;">
                 <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
                 <div class="imgcoment"></div>
                 <label for="file" style="cursor: pointer; float:right">Upload Image</label></p>
               </td>
+            </tr>
+            <tr>
+
+
+
             </tr>
           </table>
         </div>
@@ -238,137 +227,61 @@ div.desc {
               <a href="https://www.facebook.com/hristina.cvetanoska.7"><img src="https://www.bjumg.org/wp-content/uploads/2020/03/Facebook-Icon-Facebook-Logo-Social-Media-Fb-Logo-Facebook-Logo-PNG-and-Vector-with-Transparent-Background-for-Free-Download.png" name="FaceBookLogo" style="height:27px;width: 27px;"></a> 
             </span>
           </footer>
-          <script type="text/javascript">
-          /*const onLoad = () => {
-            if (localStorage.getItem('comments1'))
+                  <script src="./script3.js"></script>
 
-            var json1 = JSON.parse(localStorage.getItem('comments1'));
+          <script type="text/javascript">               
+               const onLoad = () => {
+            let json1 = [];
             let string1 = "";
-            for (var i = 0; i < json1.length; i++) {
-                var obj1 = json1[i];
-                let st1 = JSON.stringify(obj1);
-                string1 += st1;
-                string1 += "<hr>";
+            if (localStorage.getItem('comments1')) {
+                json1 = JSON.parse(localStorage.getItem('comments1'));
+                string1 = "";
+                for (var i = 0; i < json1.length; i++) {
+                    var obj1 = json1[i];
+                    let st1 = JSON.stringify(obj1);
+                    string1 += st1;
+                    string1 += "<hr>";
+                }
             }
-            if (localStorage.getItem('comments2'))
-                var json2 = JSON.parse(localStorage.getItem('comments2'));
-
-            let string2 = "";
-            for (var i = 0; i < json2.length; i++) {
-                var obj2 = json2[i];
-                let st2 = JSON.stringify(obj2);
-                string2 += st2;
-                string2 += "<hr>";
-            }
-            document.getElementById("text").innerHTML = string1;
-            document.getElementById("com2").innerHTML = string2;
-        }*/
-            function funkcija1(){ 
-             var text=document.getElementById("blogtext").value;
-              var date=new Date();
-              var p=document.createElement("p");
-              p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text").appendChild(p);   
-            }
+            document.getElementById("tuka").innerHTML = string1;
+        }
+        function comment1() {
+            event.preventDefault()
+            let t1 = document.getElementById("com1").value;
+            let comm1 = JSON.parse(localStorage.getItem('comments1')) || [];
+            var datum1 = new Date();
+            t1 =t1 + '<br>' + datum1.toUTCString();
+            comm1.push(t1)
+            localStorage.setItem('comments1', JSON.stringify(comm1))
+            console.log(comm1)
+            let newString1 = ""
+            comm1.forEach(element => {
+                newString1 += element
+                newString1 += "<hr>"
+            });
+            document.getElementById("tuka").innerHTML = newString1;
+        }
+        
+$(".flip").click(function(){
+    $flip = $(this);
+      $content = $flip.next();
+      $content.slideToggle();
+    });
+    
             var count=0;
 
             function Like(){
+              
               var button=document.getElementById("button");
                 count += 1;
                 button.innerHTML ="&#10084;:" + count;
+                localStorage.setItem('likes',count);
+                B.innerHTML=localStorage.getItem('likes');
               };
-
-              function funkcija2(){ 
-              var text=document.getElementById("blogtext2").value;
-              var date=new Date();
-              var p=document.createElement("p");
-              p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text2").appendChild(p);         
-            }
-            var count2=0;
-            function Like2(){
-              var button=document.getElementById("button2");
-                count2 += 1;
-                button.innerHTML ="&#10084;:" + count2;
-              };
-
-              function funkcija3(){ 
-              var text=document.getElementById("blogtext3").value;
-              var date=new Date();
-              var p=document.createElement("p");
-              p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text3").appendChild(p);         
-            }
-            
-            var count3=0;
-            function Like3(){
-              var button=document.getElementById("button3");
-                count3 += 1;
-                button.innerHTML ="&#10084;:" + count3;
-              };
-
-              function funkcija4(){ 
-              var text=document.getElementById("blogtext4").value;
-              var date=new Date();
-              var p=document.createElement("p");
-              p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text4").appendChild(p);         
-            }
-            
-            var count4=0;
-            function Like4(){
-              var button=document.getElementById("button4");
-                count4 += 1;
-                button.innerHTML ="&#10084;:" + count4;
-              };
-
-              function funkcija5(){ 
-              var text=document.getElementById("blogtext5").value;
-              var date=new Date();
-              var p=document.createElement("p");
-              p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text5").appendChild(p);         
-            }
-            
-            var count5=0;
-            function Like5(){
-              var button=document.getElementById("button5");
-                count5 += 1;
-                button.innerHTML ="&#10084;:" + count5;
-              };
-              function funkcija6(){ 
-              var text=document.getElementById("blogtext6").value;
-              var date=new Date();
-              var p=document.createElement("p");
-              p.innerText=text+'\n'+date.toUTCString();
-              document.getElementById("text6").appendChild(p);         
-            }
-              var count6=0;
-              function Like6(){
-              var button=document.getElementById("button6");
-                count6 += 1;
-                button.innerHTML ="&#10084;:" + count6;
-              };
-              /*function staviSLika(){
-                var slika=document.getElementById("image").value;
-                var p3=document.createElement("p");
-                p3.innerHTML=slika;
-                document.body.appendChild(p3);
-              }*/
               function loadFile(){
                 var image = document.getElementById('output');
 	              image.src = URL.createObjectURL(event.target.files[0]);
             }
-
-           /* function Comment(){
-              var p1=document.createElement("p");
-              var date=new Date();
-              var comment=document.createElement("textarea");
-              comment.id="comment";
-              var send=document.createElement("button");
-              p1.innerText=document.getElementById("comment").value +'\n \n'+date.toUTCString()+send;
-              document.getElementById("upload").appendChild(p1);
-            }*/
             window.onload=function username(){
               document.getElementById("UName").innerHTML=localStorage.getItem("storageName");         
                 }
