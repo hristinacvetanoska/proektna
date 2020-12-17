@@ -232,13 +232,13 @@ div.desc {
 
           <script type="text/javascript">               
                const onLoad = () => {
-            let json1 = [];
+            let arr = [];
             let string1 = "";
             if (localStorage.getItem('comments1')) {
-                json1 = JSON.parse(localStorage.getItem('comments1'));
+              arr = JSON.parse(localStorage.getItem('comments1'));
                 string1 = "";
-                for (var i = 0; i < json1.length; i++) {
-                    var obj1 = json1[i];
+                for (var i = 0; i < arr.length; i++) {
+                    var obj1 = arr[i];
                     let st1 = JSON.stringify(obj1);
                     string1 += st1;
                     string1 += "<hr>";
